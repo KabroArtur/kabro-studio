@@ -1,0 +1,49 @@
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .slider-buttons{
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    display: flex;
+
+}
+.slider-buttons button{
+    cursor: pointer;
+    position: relative;
+    border: none;
+    width: 50px;
+    border-radius: 20px;
+    fill: #000;
+    background-color: rgb(242, 242, 242);
+    transition: .2s ease-in-out;
+    height: 50px;
+
+    & svg{
+        width: 24px;
+    }
+    
+    &::after{
+        content: '';
+    }
+
+    &:first-child{
+        transform: rotate(180deg);
+        margin-right: 12px;
+    }
+
+    &:hover{
+        background-color: rgb(233, 233, 233);
+    }
+}
+.swiper-button-disabled{
+    opacity: 0.4;
+}

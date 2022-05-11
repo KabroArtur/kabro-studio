@@ -1,0 +1,43 @@
+$selection: #87c9ff;
+$main: rgb(66, 0, 255);
+$white: #fff;
+$dark: #1A191D;
+
+.btn-link{
+     border: 1px solid rgb(226, 226, 226);
+
+     &:hover{background-color:rgb(241, 241, 241) ;}
+}
+
+.post-url-container{
+    width: 100%;
+
+    & a{
+        position: relative;
+        width: 100%;
+        margin-bottom: 12px;
+        font-size: 14px;
+        font-weight: 500;
+        text-align: left;
+
+        &::before{
+            content: ">";
+            position: absolute;
+            right: 30px;
+            font-size: 24px;
+            color: rgb(142, 142, 142);
+        }
+
+    }
+}
+
+.right-block{
+    margin: 20px;
+    height: 600px;
+    overflow-y:scroll;
+}
+
+hr{
+    width: 100%;
+    border: 1px solid rgba( 255, 255, 255, .5);
+}

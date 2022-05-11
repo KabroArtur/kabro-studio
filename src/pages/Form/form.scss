@@ -1,0 +1,107 @@
+$selection: #87c9ff;
+$main: rgb(66, 0, 255);
+$white: #fff;
+
+.form-container{
+  position: relative;
+  margin-top: 100px;
+}
+
+.form{
+  width: 80%;
+
+  & a{
+    white-space:nowrap
+  }
+}
+
+.policy{
+  margin-top: 32px;
+}
+.block-btn-form{
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+
+  & button:first-child{
+    margin-right: 8px;
+  }
+}
+
+.links-form{
+  margin-top: 40px;
+  
+  & a{
+
+  &:first-child{
+      margin-right: 16px;
+    }
+  }
+  & svg{
+    transform: rotate(180deg);
+  }
+}
+.links-form-back{
+  margin-top: 40px;
+
+  & a{
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &:hover {
+      color: $main;
+      fill: $main;
+    }
+
+    & svg:last-child{
+      margin-right: 8px;
+    }
+  }
+
+  & svg{
+    transform: rotate(180deg);
+  }
+
+}
+.center-block{
+
+  & label{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    & span{
+      margin-bottom: 12px;
+    }
+  }
+}
+
+
+.link-under{
+  position: relative;
+ 
+  &::after{
+    content: "";
+    width: 100%;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    border: 1.1px solid #000;
+  }
+}
+
+.btn-google{
+  background-color: #fff;
+  border: 1px solid rgb(222, 221, 221);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & img{width: 24px; margin-right: 16px;}
+
+  &:hover{
+    background-color: #ebebeb;
+  }
+}
