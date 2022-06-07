@@ -8,23 +8,24 @@ import Loading from '../../components/Loading';
 import './form.scss';
 
 function Login() {
-
+  
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [user] = useAuthState(auth);
+  const [user, loading] = useAuthState(auth);
   const [name, setName] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {   
 
-    if (!user) return;
+    if (loading) return;
     if (user) return(
       navigate("/dashboard")
       );
-  }, [user]);
+  }, [user, loading]);
 
   return (
     <>
+    <Loading name="Login" small="#STOP UKRAINE WAR">
     <div className="page-container">
     <div className="form-container">
       <div className="center-block">
@@ -82,6 +83,7 @@ function Login() {
     </div>
     </div>
     </div>
+    </Loading>
     </>
   );
 }

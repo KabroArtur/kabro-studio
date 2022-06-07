@@ -43,7 +43,6 @@ render(){
                         <div className="block_menu-header">
                             <ul className="logIn-menu">
                                 <li><Link className="remove" to="/dashboard">Account</Link></li>
-                                <li><Link className="remove" to="">Purchases</Link></li>
                                 <li><a className="remove" onClick={logout}>Log out</a></li>
                             </ul>
                         </div>

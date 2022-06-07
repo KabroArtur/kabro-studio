@@ -38,7 +38,7 @@ function Shop(){
 
     return(
         <>
-        <Loading name="Loading products..." time="800">
+        <Loading name="Shop products" small="#ВОЕННЫЙ РУССКИЙ КОРАБЛЬ ПОШЕЛ НАХУЙ">
             <section className="resent-projects mt-100">
             <div className="page-container">
                 <div className="content-center flex-center">

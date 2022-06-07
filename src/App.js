@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from 'react';
 import { auth } from "./firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { PayPalScriptProvider } from '@paypal/react-paypal-js';
 
 import Main from './pages/Main';
 
@@ -13,15 +14,15 @@ function App (){
 
   const [user] = useAuthState(auth);
 
-  return (      
-  <>
+  return (     
+    <PayPalScriptProvider options={{ "client-id": "AR7ABmfGjHWjwFmKwGrYRExyphzfq2I_wvlX0UzcOOUXOhGyfHB9eWdSwSjQJk1BMKkoTpUwgdgy3bbf" }}>
+
     { user ? ( <HeaderUser/> ) : ( <Header/> )}
-   
-      <Aside/>
-      <Main />
-      <Footer/>
-    
-</>)
+           <Aside/>
+        <Main />
+        <Footer/>
+    </PayPalScriptProvider>
+    )
 
 }
 

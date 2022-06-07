@@ -20,7 +20,6 @@ function Signup() {
   const [user, loading] = useAuthState(auth);
   const navigate = useNavigate();
 
-
   const register = () => {
     if (!name) alert("Please enter name");
     registerWithEmailAndPassword(name, email, password);
@@ -36,6 +35,7 @@ function Signup() {
 
   return (
     <>
+      <Loading name="SignUp" small="#STOP UKRAINE WAR">
     <div className="page-container">
       <div className="form-container">
           <div className="center-block">
@@ -101,6 +101,7 @@ function Signup() {
           </div>
       </div>
     </div>
+    </Loading>
     </>
   );
 }

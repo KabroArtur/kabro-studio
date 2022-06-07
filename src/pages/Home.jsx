@@ -1,5 +1,6 @@
 import React,{useState, useEffect} from 'react';
 import { collection, getDocs } from 'firebase/firestore';
+import Loading from '../components/Loading';
 import { Link } from 'react-router-dom';
 import {db} from '../firebase';
 import jQuery from 'jquery';
@@ -76,6 +77,8 @@ const Home = () => {
 
 return(
 <>
+<Loading name="Kabro Studio." small="#STOP UKRAINE WAR">
+
 <main className="Home">
 <div className="bg-hero"></div>
 <div className="page-container">
@@ -90,7 +93,7 @@ return(
                     exit={{y: 0}}
                          className="content hero-content">
                         <div className="title wow animate__fadeInDown">
-                            <h1 className="font_90_bold">We’re a full-service design agency.</h1>
+                            <h1 className="font_90_bold">Hi, here you will find interesting products</h1>
                         </div>
                         <div className="btn-wrap">
                             <Link to="/shop"><Button className="btn btn-stroke main-btn">View shop</Button></Link>
@@ -523,6 +526,7 @@ return(
     </section>
     <Talk/>
 </main>
+</Loading>
 </>
     );
 

@@ -1,4 +1,5 @@
 import React,{useState, useEffect} from 'react';
+import PaypalCheckout from '../../components/PaypalCheckout';
 import { doc, getDoc } from 'firebase/firestore';
 import { useParams, Link } from 'react-router-dom';
 import {db} from '../../firebase';
@@ -12,6 +13,10 @@ import './product.scss';
 
 
 const ProductPage = () => {
+    const product ={
+        description: 'Product 1',
+        price: 301
+    }
 
     const { postsid } = useParams();
     const [posts, setPosts] = useState([]);
@@ -60,7 +65,9 @@ const ProductPage = () => {
                             <p className='font_18_regular price_text'>{posts.price}</p>
                             <p className='font_16_regular'>{posts.text}</p>
                             <hr />
-                            <button className="btn btn-black">Buy with Pay Pal</button>
+                            <div className="paypal-button-container">
+                                <PaypalCheckout product={product} />
+                            </div>
                     </motion.div>
                 </StickyBox> 
             </div>  

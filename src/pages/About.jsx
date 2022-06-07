@@ -17,7 +17,7 @@ const About = () => {
     }
 
     return(
-        <Loading name="About..." time="600">
+        <Loading name="About us" small="#STOP UKRAINE WAR">
 
 <main>
     <section className="hero-about">

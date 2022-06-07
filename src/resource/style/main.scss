@@ -13,7 +13,12 @@ $dark: #1A191D;
     font-size: 18px;
      font-weight: 400;
      line-height: 24px;
-    }
+}
+.font_24_regular{
+    font-size: 24px;
+     font-weight: 400;
+     line-height: 24px;
+}
 .font_14_regular{font-size: 14px; font-weight: 400;}
 .font_14_bold{font-size: 14px; font-weight: 600;}
 .font_40_medium{
@@ -181,6 +186,11 @@ input, select{
             }
         }
 
+        & svg{
+            fill: $main;
+            transition: fill .4s ease-in-out;
+        }
+
         &:active,
         &:focus{
             color: #fff;
@@ -276,6 +286,11 @@ input, select{
 
     & p{
         width: 600px;
+    }
+
+    & hr{
+        width: 100%;
+        border: 0.6px solid rgb(192, 192, 192);
     }
 }
 
@@ -398,18 +413,71 @@ input, select{
 // Loading
 
 .sweet-loading{
-    z-index: 9999;
+    z-index: 999;
     position: absolute;
     top: 0;
     left: 0; right: 0;
     height: 100%;
-    display: flex;
     background-color: #fff;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
 
     & p{
-        margin-left: 24px;
+        font-size: 14px;
+        animation-duration: 2s;
+        animation-name: color_change_p;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    #L9{
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        bottom: 100px;
+        display: inline-block;
+        
+      }
+
+
+
+    & div{
+        margin-top: 300px;
+        transition-delay: .2s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & span{
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            & svg{
+                margin-left: 8px;
+                width: 24px;
+            }
+
+            & small{
+                font-size: 16px;
+                font-weight: 500;
+            }
+        }
+
+        & h1{
+            font-size: 64px;
+            animation-name: color_change;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        @keyframes color_change {
+            from { color: #ff5555}
+            to { color: $main; }
+        }
+        @keyframes color_change_p {
+            from { opacity: 1;}
+            to { opacity: 0.7; }
+        }
     }
 }
 
@@ -659,6 +727,11 @@ input, select{
 .gallery-row .item-g {
     display: inline-block;
     margin-bottom: 30px;
+    width: 100%;
+  }
+.gallery-column{
+    display: flex;
+    flex-direction: column;
     width: 100%;
   }
 
